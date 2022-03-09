@@ -1,1 +1,124 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+/* 1. Set up of SASS variables and rules
+/* 1.1.Variables for colors used in the webpage design */
+/* 1.2.   SASS rules */
+/* 1.2.1. Rule to format buttons */
+/* Rule radial-gradient */
+/* Rule for ntf containers */
+.nft-main {
+  width: 200px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  border: none;
+  background-color: #eee;
+  color: #949494;
+}
+
+.nft-main .nft-pic {
+  height: 70%;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  background: url("assets/ntfs/ntf-1.svg") center/cover;
+  overflow: hidden;
+}
+
+.nft-main .nft-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 20%;
+  margin: 10px;
+}
+
+.nft-main .nft-data p {
+  margin: 0;
+  margin-top: 7px;
+}
+
+.nft-main .nft-data .color {
+  color: #f1803a;
+}
+
+.nft-main .nft-data .nft-data-top {
+  font-size: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nft-main .nft-data .nft-data-middle {
+  color: black;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nft-main .nft-data .nft-data-middle .nft-data-middle-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.nft-main .nft-data .nft-data-middle .nft-data-middle-logo img {
+  height: 14px;
+  margin-right: 5px;
+}
+
+.nft-main .nft-data .nft-data-middle p:first-child::after {
+  content: "Purple Man";
+  color: black;
+}
+
+.nft-main .nft-data .nft-data-bottom {
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+button {
+  /*  reset button css  */
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  line-height: normal;
+  background: none;
+  /*  set button css for website  */
+  position: relative;
+  color: black;
+  width: 120px;
+  height: 45px;
+  border-radius: 25px;
+  border: double 3px transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white)), radial-gradient(circle at top left, #ed3835, #f1803a);
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ed3835, #f1803a);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,106 @@
+/* 1. Set up of SASS variables and rules
+/* 1.1.Variables for colors used in the webpage design */
+$pink: #ec4496;
+$orange: #f1803a;
+$green: #71f6a0;
+$red: #ed3835;
+$light-green: #ecfdf6;
+$light-orange: #fdf0e8;
+$ligt-gray: #eee;
+
+/* 1.2.   SASS rules */
+/* 1.2.1. Rule to format buttons */
+@mixin button-format {
+    /*  reset button css  */
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    line-height: normal;
+    background: none;
+    /*  set button css for website  */
+    position: relative;
+    color: black;
+    width: 120px;
+    height: 45px;
+    border-radius: 25px;
+    border: double 3px transparent;
+    background-image: linear-gradient(white, white),
+        radial-gradient(circle at top left, $red, $orange);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+/* Rule radial-gradient */
+@mixin rad-gradient {
+    background: radial-gradient(circle at 0% 0%, $pink, transparent),
+        radial-gradient(circle at 55% 100%, $orange 50%, transparent),
+        radial-gradient(circle at 100% 0%, $green 50%, transparent);
+}
+/* Rule for ntf containers */
+@mixin nft-container($url_src, $name) {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: none;
+    background-color: $ligt-gray;
+    color: #949494;
+    .nft-pic {
+        height: 70%;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        background: url($url_src) center/cover;
+        overflow: hidden;
+    }
+    .nft-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 20%;
+        margin: 10px;
+        p {
+            margin: 0;
+            margin-top: 7px;
+        }
+        .color {
+            color: $orange;
+        }
+        .nft-data-top {
+            font-size: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .nft-data-middle {
+            color: black;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            .nft-data-middle-logo {
+                display: flex;
+                justify-content: space-around;
+                img {
+                    height: 14px;
+                    margin-right: 5px;
+                }
+            }
+            p:first-child::after {
+                content: $name;
+                color: black;
+            }
+        }
+        .nft-data-bottom {
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+.nft-main {
+    @include nft-container("assets/ntfs/ntf-1.svg", "Purple Man");
+}
+
+button {
+    @include button-format;
+}

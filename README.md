@@ -9,7 +9,7 @@ Code Academy chapter HTML CSS Exam
     If needed using CSS preprocessor (SASS/SCSS/LESS) is allowed. CSS Framework use is not allowed.
 
     Design of the webpage is provided under the link:
-    ttps://www.figma.com/file/AXFJWF3FUeEn9ppEuuXORE/NFT-Startup-Landing-Page?node-id=0%3A1
+    https://www.figma.com/file/AXFJWF3FUeEn9ppEuuXORE/NFT-Startup-Landing-Page?node-id=0%3A1
 
 2.  Scoring of exam:
 
