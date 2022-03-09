@@ -50,3 +50,6 @@ CodeAcademy_responsive
 4. Implementation:
 
 4.1. Github: created public repository "CodeAcademy_responsive
+4.2. Created HTML boilerplace and initialized SCSS.
+4.2.1. Using SCSS created variables for colors;
+4.2.2. Using SCSS created style rules/templates for button, gradient container background and cards of NFT's;
