@@ -9,6 +9,7 @@
 body {
   color: #808080;
   margin: 0;
+  padding: 1rem;
   font-size: 1rem;
 }
 
@@ -20,14 +21,15 @@ body header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  width: 100%;
 }
 
 body header nav {
   background-image: url("assets/menu-icon.png");
   background-repeat: no-repeat;
-  background-size: 30px;
   background-position: center;
+  background-size: 30px;
 }
 
 body header nav img {
@@ -42,12 +44,13 @@ body main section.launching-soon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 6rem;
+  height: 100%;
 }
 
 body main section.launching-soon div.left-side {
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+  max-width: 50%;
+  min-width: 22rem;
 }
 
 body main section.launching-soon div.left-side p:first-child {
@@ -57,7 +60,7 @@ body main section.launching-soon div.left-side p:first-child {
 
 body main section.launching-soon div.left-side h1 {
   margin: 0;
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 1.5rem;
   color: black;
 }
@@ -67,23 +70,89 @@ body main section.launching-soon div.left-side p {
   margin-bottom: 1.5rem;
 }
 
-body main section.launching-soon div.right-side {
-  overflow: hidden;
+body main section.launching-soon div.left-side button {
+  /*  reset button css  */
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  line-height: normal;
+  background: none;
+  /*  set button css for website  */
+  position: relative;
+  width: 120px;
+  height: 45px;
+  border-radius: 25px;
+  border: double 3px transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white)), radial-gradient(circle at top left, #ed3835, #f1803a);
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ed3835, #f1803a);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
 }
 
-body main section.launching-soon div.right-side img {
-  height: 100%;
+body main section.launching-soon div.left-side button a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+body main section.launching-soon div.left-side button a:hover {
+  color: #ec4496;
+}
+
+body main section.launching-soon div.right-side {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: auto;
+  margin-right: -3rem;
+  width: 35%;
+  background: url("assets/graphic.svg") no-repeat;
+  background-size: 20rem;
+  overflow-y: hidden;
+}
+
+body main section.nft-banner {
+  color: black;
+  height: 7rem;
+  margin: 0 -2rem 0 -2rem;
+  padding: 2rem;
+  background: radial-gradient(circle at 0% 0%, #ec4496, transparent), radial-gradient(circle at 55% 100%, #f1803a 50%, transparent), radial-gradient(circle at 100% 0%, #71f6a0 50%, transparent);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body main section.nft-banner p {
+  margin: 0;
+}
+
+body main section.nft-banner p:first-child {
+  font-size: 1.5rem;
+  margin-bottom: 0.7rem;
 }
 
 /*In mobile website version hide the ul list of links and show dropbox img instead*/
 /*Styling desktop website version*/
 @media screen and (min-width: 768px) {
+  body {
+    margin: 0 auto;
+    max-width: 45rem;
+  }
   body header nav {
     background-image: none;
   }
   body header nav ul {
     list-style-type: none;
     margin: 0;
+    margin-right: -2rem;
   }
   body header nav ul li {
     margin-right: 30px;
@@ -97,6 +166,13 @@ body main section.launching-soon div.right-side img {
   }
   body header nav ul li {
     display: inline;
+  }
+  body main section.launching-soon div.right-side {
+    background-position: center;
+  }
+  body main section.nft-banner {
+    border-radius: 1rem;
+    margin: 0;
   }
 }
 
@@ -198,35 +274,5 @@ body main section.launching-soon div.right-side img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-button {
-  /*  reset button css  */
-  border: none;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  line-height: normal;
-  background: none;
-  /*  set button css for website  */
-  position: relative;
-  width: 120px;
-  height: 45px;
-  border-radius: 25px;
-  border: double 3px transparent;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white)), radial-gradient(circle at top left, #ed3835, #f1803a);
-  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ed3835, #f1803a);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-}
-
-button a {
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-button a:hover {
-  color: #ec4496;
 }
 /*# sourceMappingURL=style.css.map */

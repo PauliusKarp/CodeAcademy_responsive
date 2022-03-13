@@ -124,20 +124,23 @@ $margin-sides: 0 1rem 0 1rem;
 }
 
 /*Styling mobile website version*/
+
 body {
     color: $gray-color;
     margin: 0;
+    padding: 1rem;
     font-size: 1rem;
     header {
         display: flex;
         justify-content: space-between;
         margin: 0;
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
+        width: 100%;
         nav {
             background-image: url("assets/menu-icon.png");
             background-repeat: no-repeat;
-            background-size: 30px;
             background-position: center;
+            background-size: 30px;
             img {
                 height: 30px;
             }
@@ -151,15 +154,18 @@ body {
     main {
         section.launching-soon {
             display: flex;
+            margin-bottom: 6rem;
+            height: 100%;
             div.left-side {
-                flex-grow: 2;
+                max-width: 50%;
+                min-width: 22rem;
                 p:first-child {
                     font-weight: bold;
                     color: $pink;
                 }
                 h1 {
                     margin: 0;
-                    font-size: 3rem;
+                    font-size: 4rem;
                     margin-bottom: $margin-bottom;
                     color: black;
                 }
@@ -167,12 +173,35 @@ body {
                     margin: 0;
                     margin-bottom: $margin-bottom;
                 }
+                button {
+                    @include button-format;
+                }
             }
             div.right-side {
-                overflow: hidden;
-                img {
-                    height: 100%;
-                }
+                flex-grow: 1;
+                height: auto;
+                margin-right: -3rem;
+                width: 35%;
+                background: url("assets/graphic.svg") no-repeat;
+                background-size: 20rem;
+                overflow-y: hidden;
+            }
+        }
+        section.nft-banner {
+            color: black;
+            height: 7rem;
+            margin: 0 -2rem 0 -2rem;
+            padding: 2rem;
+            @include rad-gradient;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            p {
+                margin: 0;
+            }
+            p:first-child {
+                font-size: 1.5rem;
+                margin-bottom: 0.7rem;
             }
         }
     }
@@ -183,16 +212,30 @@ body {
 /*Styling desktop website version*/
 @media screen and (min-width: 768px) {
     body {
+        margin: 0 auto;
+        max-width: 45rem;
+
         header {
             nav {
                 background-image: none;
                 ul {
                     @include clear_ul;
-
+                    margin-right: -2rem;
                     li {
                         display: inline;
                     }
                 }
+            }
+        }
+        main {
+            section.launching-soon {
+                div.right-side {
+                    background-position: center;
+                }
+            }
+            section.nft-banner {
+                border-radius: 1rem;
+                margin: 0;
             }
         }
     }
@@ -200,8 +243,4 @@ body {
 
 .nft-main {
     @include nft-container("assets/ntfs/ntf-1.svg", "Purple Man");
-}
-
-button {
-    @include button-format;
 }
