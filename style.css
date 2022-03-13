@@ -5,11 +5,12 @@
 /* Rule radial-gradient */
 /* Rule for ntf containers */
 /*Rule for clearing ul list decorators*/
+/*Rule for styling companies logos*/
 /*Styling mobile website version*/
 body {
   color: #808080;
   margin: 0;
-  padding: 1rem;
+  padding: 20px;
   font-size: 1rem;
 }
 
@@ -104,18 +105,17 @@ body main section.launching-soon div.right-side {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  height: auto;
   margin-right: -3rem;
-  width: 35%;
   background: url("assets/graphic.svg") no-repeat;
-  background-size: 20rem;
+  background-position: top -100px;
+  background-size: 23rem;
   overflow-y: hidden;
 }
 
 body main section.nft-banner {
   color: black;
-  height: 7rem;
-  margin: 0 -2rem 0 -2rem;
+  height: 14rem;
+  margin: 0 -2rem 4rem -2rem;
   padding: 2rem;
   background: radial-gradient(circle at 0% 0%, #ec4496, transparent), radial-gradient(circle at 55% 100%, #f1803a 50%, transparent), radial-gradient(circle at 100% 0%, #71f6a0 50%, transparent);
   display: -webkit-box;
@@ -135,8 +135,622 @@ body main section.nft-banner p {
 }
 
 body main section.nft-banner p:first-child {
-  font-size: 1.5rem;
+  font-size: 4rem;
   margin-bottom: 0.7rem;
+}
+
+body main section.companies-logo {
+  margin-bottom: 4rem;
+  max-width: 45rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 20px;
+  margin-right: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.companies-logo div.boomerang {
+  background: url("assets/companies/1.svg") left;
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 75px;
+  width: 138px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  body main section.companies-logo div.boomerang {
+    height: 50px;
+    width: 100px;
+    background-size: contain;
+  }
+}
+
+body main section.companies-logo div.blimp {
+  background: url("assets/companies/2.svg") left;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 75px;
+  width: 200px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  body main section.companies-logo div.blimp {
+    height: 50px;
+    width: 100px;
+    background-size: contain;
+  }
+}
+
+body main section.companies-logo div.qrco {
+  background: url("assets/companies/3.svg") left;
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 75px;
+  width: 200px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  body main section.companies-logo div.qrco {
+    height: 50px;
+    width: 100px;
+    background-size: contain;
+  }
+}
+
+body main section.companies-logo div.open-door {
+  display: none;
+  background: url("assets/companies/4.svg") left;
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 75px;
+  width: 200px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  body main section.companies-logo div.open-door {
+    height: 50px;
+    width: 100px;
+    background-size: contain;
+  }
+}
+
+body main section.companies-logo div.droplet {
+  background: url("assets/companies/5.svg") left;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 75px;
+  width: 200px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  body main section.companies-logo div.droplet {
+    height: 50px;
+    width: 100px;
+    background-size: contain;
+  }
+}
+
+body main section.auction {
+  color: black;
+  margin-bottom: 4rem;
+  overflow-x: hidden;
+}
+
+body main section.auction h2 {
+  margin: 0 0 15px 0;
+}
+
+body main section.auction p {
+  color: #808080;
+  margin: 0 0 25px 0;
+}
+
+body main section.auction .auction_container {
+  width: 45rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.auction .auction_container .nft-first {
+  width: 200px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  border: none;
+  background-color: #eee;
+  color: #949494;
+}
+
+body main section.auction .auction_container .nft-first .nft-pic {
+  height: 70%;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  background: url("assets/ntfs/ntf-1.svg") center/cover;
+  overflow: hidden;
+}
+
+body main section.auction .auction_container .nft-first .nft-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 20%;
+  margin: 10px;
+}
+
+body main section.auction .auction_container .nft-first .nft-data p {
+  margin: 0;
+  margin-top: 7px;
+}
+
+body main section.auction .auction_container .nft-first .nft-data .color {
+  color: #f1803a;
+}
+
+body main section.auction .auction_container .nft-first .nft-data .nft-data-top {
+  font-size: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.auction .auction_container .nft-first .nft-data .nft-data-middle {
+  color: black;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.auction .auction_container .nft-first .nft-data .nft-data-middle .nft-data-middle-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.auction .auction_container .nft-first .nft-data .nft-data-middle .nft-data-middle-logo img {
+  height: 14px;
+  margin-right: 5px;
+}
+
+body main section.auction .auction_container .nft-first .nft-data .nft-data-middle p:first-child::after {
+  content: "Purple Man";
+  color: black;
+}
+
+body main section.auction .auction_container .nft-first .nft-data .nft-data-bottom {
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.auction .auction_container .nft-second {
+  width: 200px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  border: none;
+  background-color: #eee;
+  color: #949494;
+}
+
+body main section.auction .auction_container .nft-second .nft-pic {
+  height: 70%;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  background: url("assets/ntfs/nft-2.svg") center/cover;
+  overflow: hidden;
+}
+
+body main section.auction .auction_container .nft-second .nft-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 20%;
+  margin: 10px;
+}
+
+body main section.auction .auction_container .nft-second .nft-data p {
+  margin: 0;
+  margin-top: 7px;
+}
+
+body main section.auction .auction_container .nft-second .nft-data .color {
+  color: #f1803a;
+}
+
+body main section.auction .auction_container .nft-second .nft-data .nft-data-top {
+  font-size: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.auction .auction_container .nft-second .nft-data .nft-data-middle {
+  color: black;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.auction .auction_container .nft-second .nft-data .nft-data-middle .nft-data-middle-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.auction .auction_container .nft-second .nft-data .nft-data-middle .nft-data-middle-logo img {
+  height: 14px;
+  margin-right: 5px;
+}
+
+body main section.auction .auction_container .nft-second .nft-data .nft-data-middle p:first-child::after {
+  content: "Belge";
+  color: black;
+}
+
+body main section.auction .auction_container .nft-second .nft-data .nft-data-bottom {
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.auction .auction_container .nft-third {
+  width: 200px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  border: none;
+  background-color: #eee;
+  color: #949494;
+}
+
+body main section.auction .auction_container .nft-third .nft-pic {
+  height: 70%;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  background: url("assets/ntfs/ntf-3.svg") center/cover;
+  overflow: hidden;
+}
+
+body main section.auction .auction_container .nft-third .nft-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 20%;
+  margin: 10px;
+}
+
+body main section.auction .auction_container .nft-third .nft-data p {
+  margin: 0;
+  margin-top: 7px;
+}
+
+body main section.auction .auction_container .nft-third .nft-data .color {
+  color: #f1803a;
+}
+
+body main section.auction .auction_container .nft-third .nft-data .nft-data-top {
+  font-size: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.auction .auction_container .nft-third .nft-data .nft-data-middle {
+  color: black;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.auction .auction_container .nft-third .nft-data .nft-data-middle .nft-data-middle-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.auction .auction_container .nft-third .nft-data .nft-data-middle .nft-data-middle-logo img {
+  height: 14px;
+  margin-right: 5px;
+}
+
+body main section.auction .auction_container .nft-third .nft-data .nft-data-middle p:first-child::after {
+  content: "Red Man";
+  color: black;
+}
+
+body main section.auction .auction_container .nft-third .nft-data .nft-data-bottom {
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.auction .auction_container .nft-fourth {
+  width: 200px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  border: none;
+  background-color: #eee;
+  color: #949494;
+}
+
+body main section.auction .auction_container .nft-fourth .nft-pic {
+  height: 70%;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  background: url("assets/ntfs/ntf-4.svg") center/cover;
+  overflow: hidden;
+}
+
+body main section.auction .auction_container .nft-fourth .nft-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 20%;
+  margin: 10px;
+}
+
+body main section.auction .auction_container .nft-fourth .nft-data p {
+  margin: 0;
+  margin-top: 7px;
+}
+
+body main section.auction .auction_container .nft-fourth .nft-data .color {
+  color: #f1803a;
+}
+
+body main section.auction .auction_container .nft-fourth .nft-data .nft-data-top {
+  font-size: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.auction .auction_container .nft-fourth .nft-data .nft-data-middle {
+  color: black;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.auction .auction_container .nft-fourth .nft-data .nft-data-middle .nft-data-middle-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.auction .auction_container .nft-fourth .nft-data .nft-data-middle .nft-data-middle-logo img {
+  height: 14px;
+  margin-right: 5px;
+}
+
+body main section.auction .auction_container .nft-fourth .nft-data .nft-data-middle p:first-child::after {
+  content: "Green";
+  color: black;
+}
+
+body main section.auction .auction_container .nft-fourth .nft-data .nft-data-bottom {
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main hr.break {
+  height: 2px;
+  background-color: #eee;
+  border: none;
+  margin-bottom: 4rem;
+  margin-right: -2rem;
+  margin-left: -2rem;
+}
+
+body footer section.launching-soon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0;
+  height: 100%;
+}
+
+body footer section.launching-soon div.left-side {
+  max-width: 50%;
+  min-width: 22rem;
+}
+
+body footer section.launching-soon div.left-side p:first-child {
+  font-weight: bold;
+  color: #ec4496;
+}
+
+body footer section.launching-soon div.left-side h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: black;
+}
+
+body footer section.launching-soon div.left-side p {
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+
+body footer section.launching-soon div.left-side button {
+  /*  reset button css  */
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  line-height: normal;
+  background: none;
+  /*  set button css for website  */
+  position: relative;
+  width: 120px;
+  height: 45px;
+  border-radius: 25px;
+  border: double 3px transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white)), radial-gradient(circle at top left, #ed3835, #f1803a);
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ed3835, #f1803a);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+body footer section.launching-soon div.left-side button a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+body footer section.launching-soon div.left-side button a:hover {
+  color: #ec4496;
+}
+
+body footer section.launching-soon div.right-side {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: -3rem;
+  margin-bottom: -0.6rem;
+  min-height: 400px;
+  background: url("assets/upsell-footer-image.svg") right bottom no-repeat;
+  background-size: 175px;
+  z-index: 1;
+  overflow-y: hidden;
+}
+
+body footer hr.break {
+  margin-bottom: 3rem;
 }
 
 /*In mobile website version hide the ul list of links and show dropbox img instead*/
@@ -172,107 +786,31 @@ body main section.nft-banner p:first-child {
   }
   body main section.nft-banner {
     border-radius: 1rem;
-    margin: 0;
+    margin: 0 0rem 4rem 0rem;
   }
-}
-
-.nft-main {
-  width: 200px;
-  height: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border-radius: 10px;
-  border: none;
-  background-color: #eee;
-  color: #949494;
-}
-
-.nft-main .nft-pic {
-  height: 70%;
-  width: 100%;
-  border-radius: 10px 10px 0 0;
-  background: url("assets/ntfs/ntf-1.svg") center/cover;
-  overflow: hidden;
-}
-
-.nft-main .nft-data {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 20%;
-  margin: 10px;
-}
-
-.nft-main .nft-data p {
-  margin: 0;
-  margin-top: 7px;
-}
-
-.nft-main .nft-data .color {
-  color: #f1803a;
-}
-
-.nft-main .nft-data .nft-data-top {
-  font-size: 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.nft-main .nft-data .nft-data-middle {
-  color: black;
-  font-size: 14px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.nft-main .nft-data .nft-data-middle .nft-data-middle-logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.nft-main .nft-data .nft-data-middle .nft-data-middle-logo img {
-  height: 14px;
-  margin-right: 5px;
-}
-
-.nft-main .nft-data .nft-data-middle p:first-child::after {
-  content: "Purple Man";
-  color: black;
-}
-
-.nft-main .nft-data .nft-data-bottom {
-  font-size: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  body main section.companies-logo {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body main section.companies-logo div.open-door {
+    display: block;
+  }
+  body main section.auction {
+    width: 100%;
+  }
+  body main hr.break {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  body footer section.launching-soon div.right-side {
+    background-position: center;
+  }
+  body footer hr.break {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

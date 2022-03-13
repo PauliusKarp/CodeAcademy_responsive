@@ -123,12 +123,26 @@ $margin-sides: 0 1rem 0 1rem;
     }
 }
 
+/*Rule for styling companies logos*/
+@mixin comp_logo($url_src, $background_pos: left, $width: 200px) {
+    background: url($url_src) left;
+    background-repeat: no-repeat;
+    background-position: $background_pos;
+    height: 75px;
+    width: $width;
+    overflow: hidden;
+    @media screen and (min-width: 768px) {
+        height: 50px;
+        width: 100px;
+        background-size: contain;
+    }
+}
 /*Styling mobile website version*/
 
 body {
     color: $gray-color;
     margin: 0;
-    padding: 1rem;
+    padding: 20px;
     font-size: 1rem;
     header {
         display: flex;
@@ -179,18 +193,17 @@ body {
             }
             div.right-side {
                 flex-grow: 1;
-                height: auto;
                 margin-right: -3rem;
-                width: 35%;
                 background: url("assets/graphic.svg") no-repeat;
-                background-size: 20rem;
+                background-position: top -100px;
+                background-size: 23rem;
                 overflow-y: hidden;
             }
         }
         section.nft-banner {
             color: black;
-            height: 7rem;
-            margin: 0 -2rem 0 -2rem;
+            height: 14rem;
+            margin: 0 -2rem 4rem -2rem;
             padding: 2rem;
             @include rad-gradient;
             display: flex;
@@ -200,9 +213,119 @@ body {
                 margin: 0;
             }
             p:first-child {
-                font-size: 1.5rem;
+                font-size: 4rem;
                 margin-bottom: 0.7rem;
             }
+        }
+        section.companies-logo {
+            margin-bottom: 4rem;
+            max-width: 45rem;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 20px;
+            margin-right: 20px;
+            justify-content: space-between;
+
+            div.boomerang {
+                @include comp_logo("assets/companies/1.svg", left, 138px);
+            }
+            div.blimp {
+                @include comp_logo("assets/companies/2.svg", right);
+            }
+            div.qrco {
+                @include comp_logo("assets/companies/3.svg");
+            }
+            div.open-door {
+                display: none;
+                @include comp_logo("assets/companies/4.svg");
+            }
+            div.droplet {
+                @include comp_logo("assets/companies/5.svg", right);
+            }
+        }
+        section.auction {
+            color: black;
+            margin-bottom: 4rem;
+            overflow-x: hidden;
+            h2 {
+                margin: 0 0 15px 0;
+            }
+            p {
+                color: $gray-color;
+                margin: 0 0 25px 0;
+            }
+            .auction_container {
+                width: 45rem;
+                display: flex;
+                column-gap: 20px;
+                justify-content: space-between;
+
+                .nft-first {
+                    @include nft-container(
+                        "assets/ntfs/ntf-1.svg",
+                        "Purple Man"
+                    );
+                }
+                .nft-second {
+                    @include nft-container("assets/ntfs/nft-2.svg", "Belge");
+                }
+                .nft-third {
+                    @include nft-container("assets/ntfs/ntf-3.svg", "Red Man");
+                }
+                .nft-fourth {
+                    @include nft-container("assets/ntfs/ntf-4.svg", "Green");
+                }
+            }
+        }
+        hr.break {
+            height: 2px;
+            background-color: $ligt-gray;
+            border: none;
+            margin-bottom: 4rem;
+            margin-right: -2rem;
+            margin-left: -2rem;
+        }
+    }
+    footer {
+        section.launching-soon {
+            display: flex;
+            margin-bottom: 0;
+            height: 100%;
+            div.left-side {
+                max-width: 50%;
+                min-width: 22rem;
+                p:first-child {
+                    font-weight: bold;
+                    color: $pink;
+                }
+                h1 {
+                    margin: 0;
+                    font-size: 2.5rem;
+                    margin-bottom: $margin-bottom;
+                    color: black;
+                }
+                p {
+                    margin: 0;
+                    margin-bottom: $margin-bottom;
+                }
+                button {
+                    @include button-format;
+                }
+            }
+            div.right-side {
+                flex-grow: 1;
+                margin-right: -3rem;
+                margin-bottom: -0.6rem;
+                min-height: 400px;
+                background: url("assets/upsell-footer-image.svg") right bottom
+                    no-repeat;
+                background-size: 175px;
+                z-index: 1;
+                overflow-y: hidden;
+            }
+        }
+        hr.break {
+            margin-bottom: 3rem;
         }
     }
 }
@@ -235,12 +358,34 @@ body {
             }
             section.nft-banner {
                 border-radius: 1rem;
-                margin: 0;
+                margin: 0 0rem 4rem 0rem;
+            }
+            section.companies-logo {
+                flex-wrap: nowrap;
+
+                justify-content: space-between;
+                div.open-door {
+                    display: block;
+                }
+            }
+            section.auction {
+                width: 100%;
+            }
+            hr.break {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+        footer {
+            section.launching-soon {
+                div.right-side {
+                    background-position: center;
+                }
+            }
+            hr.break {
+                margin-right: 0;
+                margin-left: 0;
             }
         }
     }
-}
-
-.nft-main {
-    @include nft-container("assets/ntfs/ntf-1.svg", "Purple Man");
 }
