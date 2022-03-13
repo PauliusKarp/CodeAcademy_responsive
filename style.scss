@@ -1,5 +1,5 @@
 /* 1. Set up of SASS variables and rules
-/* 1.1.Variables for colors used in the webpage design */
+/* 1.1.Variables for colors and margins used in the webpage design */
 $pink: #ec4496;
 $orange: #f1803a;
 $green: #71f6a0;
@@ -7,6 +7,9 @@ $red: #ed3835;
 $light-green: #ecfdf6;
 $light-orange: #fdf0e8;
 $ligt-gray: #eee;
+$gray-color: #808080;
+$margin-bottom: 1.5rem;
+$margin-sides: 0 1rem 0 1rem;
 
 /* 1.2.   SASS rules */
 /* 1.2.1. Rule to format buttons */
@@ -20,7 +23,6 @@ $ligt-gray: #eee;
     background: none;
     /*  set button css for website  */
     position: relative;
-    color: black;
     width: 120px;
     height: 45px;
     border-radius: 25px;
@@ -29,6 +31,14 @@ $ligt-gray: #eee;
         radial-gradient(circle at top left, $red, $orange);
     background-origin: border-box;
     background-clip: content-box, border-box;
+    a {
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    a:hover {
+        color: $pink;
+    }
 }
 /* Rule radial-gradient */
 @mixin rad-gradient {
@@ -79,6 +89,7 @@ $ligt-gray: #eee;
             .nft-data-middle-logo {
                 display: flex;
                 justify-content: space-around;
+                align-items: center;
                 img {
                     height: 14px;
                     margin-right: 5px;
@@ -93,6 +104,96 @@ $ligt-gray: #eee;
             font-size: 12px;
             display: flex;
             justify-content: space-between;
+        }
+    }
+}
+/*Rule for clearing ul list decorators*/
+@mixin clear_ul {
+    list-style-type: none;
+    margin: 0;
+    li {
+        margin-right: 30px;
+        a {
+            text-decoration: none;
+            color: $gray-color;
+        }
+        a:hover {
+            color: $pink;
+        }
+    }
+}
+
+/*Styling mobile website version*/
+body {
+    color: $gray-color;
+    margin: 0;
+    font-size: 1rem;
+    header {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        margin-bottom: 3rem;
+        nav {
+            background-image: url("assets/menu-icon.png");
+            background-repeat: no-repeat;
+            background-size: 30px;
+            background-position: center;
+            img {
+                height: 30px;
+            }
+            ul {
+                li {
+                    display: none;
+                }
+            }
+        }
+    }
+    main {
+        section.launching-soon {
+            display: flex;
+            div.left-side {
+                flex-grow: 2;
+                p:first-child {
+                    font-weight: bold;
+                    color: $pink;
+                }
+                h1 {
+                    margin: 0;
+                    font-size: 3rem;
+                    margin-bottom: $margin-bottom;
+                    color: black;
+                }
+                p {
+                    margin: 0;
+                    margin-bottom: $margin-bottom;
+                }
+            }
+            div.right-side {
+                overflow: hidden;
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+/*In mobile website version hide the ul list of links and show dropbox img instead*/
+
+/*Styling desktop website version*/
+@media screen and (min-width: 768px) {
+    body {
+        header {
+            nav {
+                background-image: none;
+                ul {
+                    @include clear_ul;
+
+                    li {
+                        display: inline;
+                    }
+                }
+            }
         }
     }
 }

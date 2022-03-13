@@ -1,9 +1,105 @@
 /* 1. Set up of SASS variables and rules
-/* 1.1.Variables for colors used in the webpage design */
+/* 1.1.Variables for colors and margins used in the webpage design */
 /* 1.2.   SASS rules */
 /* 1.2.1. Rule to format buttons */
 /* Rule radial-gradient */
 /* Rule for ntf containers */
+/*Rule for clearing ul list decorators*/
+/*Styling mobile website version*/
+body {
+  color: #808080;
+  margin: 0;
+  font-size: 1rem;
+}
+
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
+body header nav {
+  background-image: url("assets/menu-icon.png");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+}
+
+body header nav img {
+  height: 30px;
+}
+
+body header nav ul li {
+  display: none;
+}
+
+body main section.launching-soon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main section.launching-soon div.left-side {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+body main section.launching-soon div.left-side p:first-child {
+  font-weight: bold;
+  color: #ec4496;
+}
+
+body main section.launching-soon div.left-side h1 {
+  margin: 0;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: black;
+}
+
+body main section.launching-soon div.left-side p {
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+
+body main section.launching-soon div.right-side {
+  overflow: hidden;
+}
+
+body main section.launching-soon div.right-side img {
+  height: 100%;
+}
+
+/*In mobile website version hide the ul list of links and show dropbox img instead*/
+/*Styling desktop website version*/
+@media screen and (min-width: 768px) {
+  body header nav {
+    background-image: none;
+  }
+  body header nav ul {
+    list-style-type: none;
+    margin: 0;
+  }
+  body header nav ul li {
+    margin-right: 30px;
+  }
+  body header nav ul li a {
+    text-decoration: none;
+    color: #808080;
+  }
+  body header nav ul li a:hover {
+    color: #ec4496;
+  }
+  body header nav ul li {
+    display: inline;
+  }
+}
+
 .nft-main {
   width: 200px;
   height: 300px;
@@ -79,6 +175,9 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nft-main .nft-data .nft-data-middle .nft-data-middle-logo img {
@@ -111,7 +210,6 @@ button {
   background: none;
   /*  set button css for website  */
   position: relative;
-  color: black;
   width: 120px;
   height: 45px;
   border-radius: 25px;
@@ -120,5 +218,15 @@ button {
   background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ed3835, #f1803a);
   background-origin: border-box;
   background-clip: content-box, border-box;
+}
+
+button a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+button a:hover {
+  color: #ec4496;
 }
 /*# sourceMappingURL=style.css.map */
