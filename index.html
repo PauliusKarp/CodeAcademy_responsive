@@ -1,3 +1,12 @@
+<!--
+****************************************************************************************************************************************************
+  Website HTML structure
+  Website name: "CodeAcademy_responsive"
+  Created by: Paulius Karpavicius
+  Created on: 2022-03-09
+  Modified on: 2022-03-14
+/****************************************************************************************************************************************************/
+-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,7 +14,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
-
+        <!--Google font: Roboto-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <title>NFT Startup Landing Page</title>
     </head>
     <body>
@@ -53,8 +65,9 @@
                     We have released four limited edition NFT's early which can
                     be bid on via <a>OpenSea</a>
                 </p>
+                <!--NFT containers are placed in this div -->
                 <div class="auction_container">
-                    <!--first container-->
+                    <!--first container for NFT itemr -->
                     <div class="nft-first">
                         <div class="nft-pic"></div>
                         <div class="nft-data">
@@ -78,7 +91,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--Second container-->
+                    <!--Second container for NFTitem-->
                     <div class="nft-second">
                         <div class="nft-pic"></div>
                         <div class="nft-data">
@@ -102,7 +115,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--Third container-->
+                    <!--Third container for NFT item-->
                     <div class="nft-third">
                         <div class="nft-pic"></div>
                         <div class="nft-data">
@@ -126,7 +139,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--Fourth container-->
+                    <!--Fourth container for NFT item-->
                     <div class="nft-fourth">
                         <div class="nft-pic"></div>
                         <div class="nft-data">
@@ -155,6 +168,7 @@
             <hr class="break" />
         </main>
         <footer>
+            <!--Launching soon section for footer part of the webpage-->
             <section class="launching-soon">
                 <div class="left-side">
                     <p>LAUNCHING SOON</p>
@@ -173,37 +187,39 @@
                     <div class="logo-social">
                         <img src="assets/logo.svg" />
                         <p>Exclusive NFT Collection</p>
+                        <!--Social media logos with respective links-->
                         <ul>
                             <li>
                                 <a
                                     href="https://www.facebook.com/"
                                     target="_blank"
-                                    >&#xF344;</a
+                                    ><img src="assets/social/facebook.svg" alt="facebook logo"></a
                                 >
                             </li>
                             <li>
                                 <a
                                     href="https://www.twitter.com/"
                                     target="_blank"
-                                    >twitter</a
+                                    ><img src="assets/social/twitter.svg" alt="twitter logo"></a
                                 >
                             </li>
                             <li>
                                 <a
                                     href="https://www.instagram.com/"
                                     target="_blank"
-                                    >insta</a
+                                    ><img src="assets/social/instagram.svg" alt="instagram logo"></a
                                 >
                             </li>
                             <li>
                                 <a
                                     href="https://www.tiktok.com/"
                                     target="_blank"
-                                    >tiktok</i
+                                    ><img src="assets/social/tiktok.svg" alt=" logo"></i
                                 ></a>
                             </li>
                         </ul>
                     </div>
+                    <!--Footer navigation-->
                     <nav>
                         <ul>
                             <li>About</li>
@@ -237,3 +253,4 @@
         </footer>
     </body>
 </html>
+<!--End of website HTML structure-->

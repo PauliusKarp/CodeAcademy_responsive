@@ -1,16 +1,39 @@
+/****************************************************************************************************************************************************/
+/*Website stylesheet
+  Website name: "CodeAcademy_responsive"
+  Created by: Paulius Karpavicius
+  Created on: 2022-03-09
+  Modified on: 2022-03-14
+
+/****************************************************************************************************************************************************/
 /* 1. Set up of SASS variables and rules
-/* 1.1.Variables for colors and margins used in the webpage design */
+/****************************************************************************************************************************************************/
+/* 1.1.Variables for colors and margins used in the webpage design. All colors are picked based on design files */
 /* 1.2.   SASS rules */
 /* 1.2.1. Rule to format buttons */
-/* Rule radial-gradient */
-/* Rule for ntf containers */
-/*Rule for clearing ul list decorators*/
-/*Rule for styling companies logos*/
-/*Styling mobile website version*/
+/* 1.2.2. Rule radial-gradient */
+/* 1.2.3. Rule for ntf containers */
+/* 1.2.4. Rule for clearing ul list decorators*/
+/* 1.2.5. Rule for styling companies logos*/
+/****************************************************************************************************************************************************/
+/* 2. Styling mobile website version | screen size up to 786px*/
+/****************************************************************************************************************************************************/
+/* 2.1. Website element positioning is based primeraly on flex-box*/
+html {
+  background-color: #eee;
+  font-family: "Roboto", sans-serif;
+  /*Google fonts Roboto*/
+}
+
 body {
+  min-width: 556px;
+  /*smallest allowed screen size width*/
   color: #808080;
+  background-color: white;
+  border-radius: 10px;
   margin: 0;
   padding: 20px;
+  /*not relevant for desktop version*/
   font-size: 1rem;
 }
 
@@ -28,6 +51,7 @@ body header {
 
 body header nav {
   background-image: url("assets/menu-icon.png");
+  /*For mobile website we use image of drop-down menu*/
   background-repeat: no-repeat;
   background-position: center;
   background-size: 30px;
@@ -39,6 +63,7 @@ body header nav img {
 
 body header nav ul li {
   display: none;
+  /*For mobile website navigation selections are disabled / hidden*/
 }
 
 body main section.launching-soon {
@@ -118,6 +143,7 @@ body main section.nft-banner {
   margin: 0 -2rem 4rem -2rem;
   padding: 2rem;
   background: radial-gradient(circle at 0% 0%, #ec4496, transparent), radial-gradient(circle at 55% 100%, #f1803a 50%, transparent), radial-gradient(circle at 100% 0%, #71f6a0 50%, transparent);
+  /* banner background color is set using radial gradient CSS rules */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -206,6 +232,7 @@ body main section.companies-logo div.qrco {
 }
 
 body main section.companies-logo div.open-door {
+  /* for mobile website OpenDoor logo is disabled / hiden */
   display: none;
   background: url("assets/companies/4.svg") left;
   background-repeat: no-repeat;
@@ -268,6 +295,7 @@ body main section.auction .auction_container {
 }
 
 body main section.auction .auction_container .nft-first {
+  /* nft containers for items on sale are created using custom SASS rule "nft-container"*/
   width: 200px;
   height: 300px;
   display: -webkit-box;
@@ -668,6 +696,7 @@ body main section.auction .auction_container .nft-fourth .nft-data .nft-data-bot
 }
 
 body main hr.break {
+  /* places gray horizontal lines*/
   height: 2px;
   background-color: #eee;
   border: none;
@@ -677,6 +706,7 @@ body main hr.break {
 }
 
 body footer section.launching-soon {
+  /* similar section to one used in main*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -749,12 +779,126 @@ body footer section.launching-soon div.right-side {
   overflow-y: hidden;
 }
 
-body footer hr.break {
-  margin-bottom: 3rem;
+body footer section.footer-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-/*In mobile website version hide the ul list of links and show dropbox img instead*/
-/*Styling desktop website version*/
+body footer section.footer-end div.footer-main div.logo-social {
+  margin-bottom: 2rem;
+}
+
+body footer section.footer-end div.footer-main div.logo-social img {
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+body footer section.footer-end div.footer-main div.logo-social p {
+  margin: 0 0 20px 0;
+}
+
+body footer section.footer-end div.footer-main div.logo-social ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body footer section.footer-end div.footer-main div.logo-social ul li {
+  margin-right: 30px;
+}
+
+body footer section.footer-end div.footer-main div.logo-social ul li a {
+  text-decoration: none;
+  color: #808080;
+}
+
+body footer section.footer-end div.footer-main div.logo-social ul li a:hover {
+  color: #ec4496;
+}
+
+body footer section.footer-end div.footer-main div.logo-social ul li {
+  display: inline;
+  margin: 0 10px 0 0;
+}
+
+body footer section.footer-end div.footer-main div.logo-social ul li a img {
+  height: 20px;
+}
+
+body footer section.footer-end div.footer-main nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+body footer section.footer-end div.footer-main nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  width: 200px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+body footer section.footer-end div.footer-main nav ul li {
+  margin-right: 30px;
+}
+
+body footer section.footer-end div.footer-main nav ul li a {
+  text-decoration: none;
+  color: #808080;
+}
+
+body footer section.footer-end div.footer-main nav ul li a:hover {
+  color: #ec4496;
+}
+
+body footer section.footer-end div.footer-main nav ul li a:hover {
+  color: #ec4496;
+}
+
+body footer section.footer-end div.footer-main nav ul li:first-child {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+body footer section.footer-end div.footer-copy {
+  margin-bottom: 4rem;
+}
+
+body footer section.footer-end div.footer-copy p {
+  font-size: 1.8rem;
+}
+
+body footer section.footer-end div.footer-copy p:nth-child(2) {
+  display: none;
+}
+
+body footer hr.break {
+  margin-bottom: 4rem;
+  height: 2px;
+  background-color: #eee;
+  border: none;
+}
+
+/****************************************************************************************************************************************************/
+/* 3. Styling desktop website version*/
+/****************************************************************************************************************************************************/
+/* 3.1. Desktop styling applies to all website windowns equal or wider than 768px*/
 @media screen and (min-width: 768px) {
   body {
     margin: 0 auto;
@@ -779,6 +923,7 @@ body footer hr.break {
     color: #ec4496;
   }
   body header nav ul li {
+    /* for desktop version of website navigation list is displayed */
     display: inline;
   }
   body main section.launching-soon div.right-side {
@@ -796,6 +941,7 @@ body footer hr.break {
             justify-content: space-between;
   }
   body main section.companies-logo div.open-door {
+    /* for desktop version of website OpenDoor company logo is displayed */
     display: block;
   }
   body main section.auction {
@@ -808,9 +954,73 @@ body footer hr.break {
   body footer section.launching-soon div.right-side {
     background-position: center;
   }
+  body footer section.footer-end div.footer-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
+  body footer section.footer-end div.footer-main div.logo-social img {
+    width: 200px;
+  }
+  body footer section.footer-end div.footer-main div.logo-social ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: -5rem;
+  }
+  body footer section.footer-end div.footer-main div.logo-social ul li {
+    width: 20px;
+  }
+  body footer section.footer-end div.footer-main nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+  }
+  body footer section.footer-end div.footer-main nav ul {
+    width: auto;
+    font-size: 1rem;
+  }
+  body footer section.footer-end div.footer-copy {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body footer section.footer-end div.footer-copy p {
+    font-size: 1rem;
+  }
+  body footer section.footer-end div.footer-copy p:nth-child(2) {
+    display: block;
+  }
   body footer hr.break {
     margin-right: 0;
     margin-left: 0;
   }
 }
+
+/****************************************************************************************************************************************************/
+/* End of website styling*/
+/****************************************************************************************************************************************************/
 /*# sourceMappingURL=style.css.map */
