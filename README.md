@@ -1,6 +1,6 @@
 # CodeAcademy_responsive
 
----
+NOTE! --> Sometimes does not work correct when using browser inspector... need to reset or resize without the inspector...
 
 Project information:
 

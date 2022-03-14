@@ -24,128 +24,128 @@ $margin-sides: 0 1rem 0 1rem;
 /* 1.2.   SASS rules */
 /* 1.2.1. Rule to format buttons */
 @mixin button-format {
-  /*  reset button css  */
-  border: none;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  line-height: normal;
-  background: none;
-  /*  set button css for website  */
-  position: relative;
-  width: 120px;
-  height: 45px;
-  border-radius: 25px;
-  border: double 3px transparent;
-  background-image: linear-gradient(white, white),
-    radial-gradient(circle at top left, $red, $orange);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  a {
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  a:hover {
-    color: $pink;
-  }
+    /*  reset button css  */
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    line-height: normal;
+    background: none;
+    /*  set button css for website  */
+    position: relative;
+    width: 120px;
+    height: 45px;
+    border-radius: 25px;
+    border: double 3px transparent;
+    background-image: linear-gradient(white, white),
+        radial-gradient(circle at top left, $red, $orange);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    a {
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    a:hover {
+        color: $pink;
+    }
 }
 /* 1.2.2. Rule radial-gradient */
 @mixin rad-gradient {
-  background: radial-gradient(circle at 0% 0%, $pink, transparent),
-    radial-gradient(circle at 55% 100%, $orange 50%, transparent),
-    radial-gradient(circle at 100% 0%, $green 50%, transparent);
+    background: radial-gradient(circle at 0% 0%, $pink, transparent),
+        radial-gradient(circle at 55% 100%, $orange 50%, transparent),
+        radial-gradient(circle at 100% 0%, $green 50%, transparent);
 }
 /* 1.2.3. Rule for ntf containers */
 @mixin nft-container($url_src, $name) {
-  width: 200px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  border: none;
-  background-color: $ligt-gray;
-  color: #949494;
-  .nft-pic {
-    height: 70%;
-    width: 100%;
-    border-radius: 10px 10px 0 0;
-    background: url($url_src) center/cover;
-    overflow: hidden;
-  }
-  .nft-data {
+    width: 200px;
+    height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 20%;
-    margin: 10px;
-    p {
-      margin: 0;
-      margin-top: 7px;
+    border-radius: 10px;
+    border: none;
+    background-color: $ligt-gray;
+    color: #949494;
+    .nft-pic {
+        height: 70%;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        background: url($url_src) center/cover;
+        overflow: hidden;
     }
-    .color {
-      color: $orange;
-    }
-    .nft-data-top {
-      font-size: 8px;
-      display: flex;
-      justify-content: space-between;
-    }
-    .nft-data-middle {
-      color: black;
-      font-size: 14px;
-      display: flex;
-      justify-content: space-between;
-      .nft-data-middle-logo {
+    .nft-data {
         display: flex;
-        justify-content: space-around;
-        align-items: center;
-        img {
-          height: 14px;
-          margin-right: 5px;
+        flex-direction: column;
+        justify-content: center;
+        height: 20%;
+        margin: 10px;
+        p {
+            margin: 0;
+            margin-top: 7px;
         }
-      }
-      p:first-child::after {
-        content: $name;
-        color: black;
-      }
+        .color {
+            color: $orange;
+        }
+        .nft-data-top {
+            font-size: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .nft-data-middle {
+            color: black;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            .nft-data-middle-logo {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                img {
+                    height: 14px;
+                    margin-right: 5px;
+                }
+            }
+            p:first-child::after {
+                content: $name;
+                color: black;
+            }
+        }
+        .nft-data-bottom {
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
     }
-    .nft-data-bottom {
-      font-size: 12px;
-      display: flex;
-      justify-content: space-between;
-    }
-  }
 }
 /* 1.2.4. Rule for clearing ul list decorators*/
 @mixin clear_ul {
-  list-style-type: none;
-  margin: 0;
-  li {
-    margin-right: 30px;
-    a {
-      text-decoration: none;
-      color: $gray-color;
+    list-style-type: none;
+    margin: 0;
+    li {
+        margin-right: 30px;
+        a {
+            text-decoration: none;
+            color: $gray-color;
+        }
+        a:hover {
+            color: $pink;
+        }
     }
-    a:hover {
-      color: $pink;
-    }
-  }
 }
 
 /* 1.2.5. Rule for styling companies logos*/
 @mixin comp_logo($url_src, $background_pos: left, $width: 200px) {
-  background: url($url_src) left;
-  background-repeat: no-repeat;
-  background-position: $background_pos;
-  height: 75px;
-  width: $width;
-  overflow: hidden;
-  @media screen and (min-width: 768px) {
-    height: 50px;
-    width: 100px;
-    background-size: contain;
-  }
+    background: url($url_src) left;
+    background-repeat: no-repeat;
+    background-position: $background_pos;
+    height: 75px;
+    width: $width;
+    overflow: hidden;
+    @media screen and (min-width: 768px) {
+        height: 50px;
+        width: 100px;
+        background-size: contain;
+    }
 }
 
 /****************************************************************************************************************************************************/
@@ -154,267 +154,271 @@ $margin-sides: 0 1rem 0 1rem;
 
 /* 2.1. Website element positioning is based primeraly on flex-box*/
 html {
-  background-color: #eee;
-  font-family: "Roboto", sans-serif; /*Google fonts Roboto*/
+    background-color: #eee;
+    font-family: "Roboto", sans-serif; /*Google fonts Roboto*/
 }
 body {
-  min-width: 556px; /*smallest allowed screen size width*/
-  color: $gray-color;
-  background-color: white;
-  border-radius: 10px;
-  margin: 0;
-  padding: 20px; /*not relevant for desktop version*/
-  font-size: 1rem;
-  header {
-    display: flex;
-    justify-content: space-between;
+    min-width: 556px; /*smallest allowed screen size width*/
+    color: $gray-color;
+    background-color: white;
+    border-radius: 10px;
     margin: 0;
-    margin-bottom: 4rem;
-    width: 100%;
-    nav {
-      background-image: url("assets/menu-icon.png"); /*For mobile website we use image of drop-down menu*/
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 30px;
-      img {
-        height: 30px;
-      }
-      ul {
-        li {
-          display: none; /*For mobile website navigation selections are disabled / hidden*/
-        }
-      }
-    }
-  }
-  main {
-    section.launching-soon {
-      display: flex;
-      margin-bottom: 6rem;
-      height: 100%;
-      div.left-side {
-        max-width: 50%;
-        min-width: 22rem;
-        p:first-child {
-          font-weight: bold;
-          color: $pink;
-        }
-        h1 {
-          margin: 0;
-          font-size: 4rem;
-          margin-bottom: $margin-bottom;
-          color: black;
-        }
-        p {
-          margin: 0;
-          margin-bottom: $margin-bottom;
-        }
-        button {
-          @include button-format;
-        }
-      }
-      div.right-side {
-        flex-grow: 1;
-        margin-right: -3rem;
-        background: url("assets/graphic.svg") no-repeat;
-        background-position: top -100px;
-        background-size: 23rem;
-        overflow-y: hidden;
-      }
-    }
-    section.nft-banner {
-      color: black;
-      height: 14rem;
-      margin: 0 -2rem 4rem -2rem;
-      padding: 2rem;
-      @include rad-gradient; /* banner background color is set using radial gradient CSS rules */
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      p {
-        margin: 0;
-      }
-      p:first-child {
-        font-size: 4rem;
-        margin-bottom: 0.7rem;
-      }
-    }
-    section.companies-logo {
-      margin-bottom: 4rem;
-      max-width: 45rem;
-      display: flex;
-      flex-wrap: wrap;
-      margin-left: 20px;
-      margin-right: 20px;
-      justify-content: space-between;
-
-      div.boomerang {
-        @include comp_logo("assets/companies/1.svg", left, 138px);
-      }
-      div.blimp {
-        @include comp_logo("assets/companies/2.svg", right);
-      }
-      div.qrco {
-        @include comp_logo("assets/companies/3.svg");
-      }
-      div.open-door {
-        /* for mobile website OpenDoor logo is disabled / hiden */
-        display: none;
-        @include comp_logo("assets/companies/4.svg");
-      }
-      div.droplet {
-        @include comp_logo("assets/companies/5.svg", right);
-      }
-    }
-    section.auction {
-      color: black;
-      margin-bottom: 4rem;
-      overflow-x: hidden;
-      h2 {
-        margin: 0 0 15px 0;
-      }
-      p {
-        color: $gray-color;
-        margin: 0 0 25px 0;
-      }
-      .auction_container {
-        width: 45rem;
+    padding: 20px; /*not relevant for desktop version*/
+    font-size: 1rem;
+    header {
         display: flex;
-        column-gap: 20px;
         justify-content: space-between;
-
-        .nft-first {
-          /* nft containers for items on sale are created using custom SASS rule "nft-container"*/
-          @include nft-container("assets/ntfs/ntf-1.svg", "Purple Man");
-        }
-        .nft-second {
-          @include nft-container("assets/ntfs/nft-2.svg", "Belge");
-        }
-        .nft-third {
-          @include nft-container("assets/ntfs/ntf-3.svg", "Red Man");
-        }
-        .nft-fourth {
-          @include nft-container("assets/ntfs/ntf-4.svg", "Green");
-        }
-      }
-    }
-    hr.break {
-      /* places gray horizontal lines*/
-      height: 2px;
-      background-color: $ligt-gray;
-      border: none;
-      margin-bottom: 4rem;
-      margin-right: -2rem;
-      margin-left: -2rem;
-    }
-  }
-  footer {
-    section.launching-soon {
-      /* similar section to one used in main*/
-      display: flex;
-      margin-bottom: 0;
-      height: 100%;
-      div.left-side {
-        max-width: 50%;
-        min-width: 22rem;
-        p:first-child {
-          font-weight: bold;
-          color: $pink;
-        }
-        h1 {
-          margin: 0;
-          font-size: 2.5rem;
-          margin-bottom: $margin-bottom;
-          color: black;
-        }
-        p {
-          margin: 0;
-          margin-bottom: $margin-bottom;
-        }
-        button {
-          @include button-format;
-        }
-      }
-      div.right-side {
-        flex-grow: 1;
-        margin-right: -3rem;
-        margin-bottom: -0.6rem;
-        min-height: 400px;
-        background: url("assets/upsell-footer-image.svg") right bottom no-repeat;
-        background-size: 175px;
-        z-index: 1;
-        overflow-y: hidden;
-      }
-    }
-    section.footer-end {
-      display: flex;
-      flex-direction: column;
-      div.footer-main {
-        div.logo-social {
-          img {
-            height: 60px;
-            margin-bottom: 20px;
-          }
-          p {
-            margin: 0 0 20px 0;
-          }
-
-          ul {
-            @include clear_ul;
-            padding: 0;
-            li {
-              display: inline;
-              margin: 0 10px 0 0;
-              a {
-                img {
-                  height: 20px;
-                }
-              }
-            }
-          }
-          margin-bottom: 2rem;
-        }
-        nav {
-          display: flex;
-          justify-content: flex-start;
-          flex-wrap: wrap;
-          ul {
-            @include clear_ul;
-            padding-left: 0;
-            width: 200px;
-            flex-grow: 1;
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            li {
-              a:hover {
-                color: $pink;
-              }
-            }
-            li:first-child {
-              font-weight: bold;
-              margin-bottom: 15px;
-            }
-          }
-          margin-bottom: 2rem;
-        }
-      }
-      div.footer-copy {
-        p {
-          font-size: 1.8rem;
-        }
-        p:nth-child(2) {
-          display: none;
-        }
+        margin: 0;
         margin-bottom: 4rem;
-      }
+        width: 100%;
+        nav {
+            background-image: url("assets/menu-icon.png"); /*For mobile website we use image of drop-down menu*/
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 30px;
+            img {
+                height: 30px;
+            }
+            ul {
+                li {
+                    display: none; /*For mobile website navigation selections are disabled / hidden*/
+                }
+            }
+        }
     }
+    main {
+        section.launching-soon {
+            display: flex;
+            margin-bottom: 6rem;
+            height: 100%;
+            div.left-side {
+                max-width: 50%;
+                min-width: 22rem;
+                p:first-child {
+                    font-weight: bold;
+                    color: $pink;
+                }
+                h1 {
+                    margin: 0;
+                    font-size: 4rem;
+                    margin-bottom: $margin-bottom;
+                    color: black;
+                }
+                p {
+                    margin: 0;
+                    margin-bottom: $margin-bottom;
+                }
+                button {
+                    @include button-format;
+                }
+            }
+            div.right-side {
+                flex-grow: 1;
+                margin-right: -3rem;
+                background: url("assets/graphic.svg") no-repeat;
+                background-position: top -100px;
+                background-size: 23rem;
+                overflow-y: hidden;
+            }
+        }
+        section.nft-banner {
+            color: black;
+            height: 14rem;
+            margin: 0 -2rem 4rem -2rem;
+            padding: 2rem;
+            @include rad-gradient; /* banner background color is set using radial gradient CSS rules */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            p {
+                margin: 0;
+            }
+            p:first-child {
+                font-size: 4rem;
+                margin-bottom: 0.7rem;
+            }
+        }
+        section.companies-logo {
+            margin-bottom: 4rem;
+            max-width: 45rem;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 20px;
+            margin-right: 20px;
+            justify-content: space-between;
 
-    hr.break {
-      margin-bottom: 4rem;
-      height: 2px;
-      background-color: $ligt-gray;
-      border: none;
+            div.boomerang {
+                @include comp_logo("assets/companies/1.svg", left, 138px);
+            }
+            div.blimp {
+                @include comp_logo("assets/companies/2.svg", right);
+            }
+            div.qrco {
+                @include comp_logo("assets/companies/3.svg");
+            }
+            div.open-door {
+                /* for mobile website OpenDoor logo is disabled / hiden */
+                display: none;
+                @include comp_logo("assets/companies/4.svg");
+            }
+            div.droplet {
+                @include comp_logo("assets/companies/5.svg", right);
+            }
+        }
+        section.auction {
+            color: black;
+            margin-bottom: 4rem;
+            overflow-x: hidden;
+            h2 {
+                margin: 0 0 15px 0;
+            }
+            p {
+                color: $gray-color;
+                margin: 0 0 25px 0;
+            }
+            .auction_container {
+                width: 45rem;
+                display: flex;
+                column-gap: 20px;
+                justify-content: space-between;
+
+                .nft-first {
+                    /* nft containers for items on sale are created using custom SASS rule "nft-container"*/
+                    @include nft-container(
+                        "assets/ntfs/ntf-1.svg",
+                        "Purple Man"
+                    );
+                }
+                .nft-second {
+                    @include nft-container("assets/ntfs/nft-2.svg", "Belge");
+                }
+                .nft-third {
+                    @include nft-container("assets/ntfs/ntf-3.svg", "Red Man");
+                }
+                .nft-fourth {
+                    @include nft-container("assets/ntfs/ntf-4.svg", "Green");
+                }
+            }
+        }
+        hr.break {
+            /* places gray horizontal lines*/
+            height: 2px;
+            background-color: $ligt-gray;
+            border: none;
+            margin-bottom: 4rem;
+            margin-right: -2rem;
+            margin-left: -2rem;
+        }
     }
-  }
+    footer {
+        section.launching-soon {
+            /* similar section to one used in main*/
+            display: flex;
+            margin-bottom: 0;
+            height: 100%;
+            div.left-side {
+                max-width: 50%;
+                min-width: 22rem;
+                p:first-child {
+                    font-weight: bold;
+                    color: $pink;
+                }
+                h1 {
+                    margin: 0;
+                    font-size: 2.5rem;
+                    margin-bottom: $margin-bottom;
+                    color: black;
+                }
+                p {
+                    margin: 0;
+                    margin-bottom: $margin-bottom;
+                }
+                button {
+                    @include button-format;
+                }
+            }
+            div.right-side {
+                flex-grow: 1;
+                margin-right: -3rem;
+                margin-bottom: -0.6rem;
+                min-height: 400px;
+                background: url("assets/upsell-footer-image.svg") right bottom
+                    no-repeat;
+                background-size: 175px;
+                z-index: 1;
+                overflow-y: hidden;
+            }
+        }
+        section.footer-end {
+            display: flex;
+            flex-direction: column;
+            div.footer-main {
+                div.logo-social {
+                    img {
+                        height: 60px;
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        margin: 0 0 20px 0;
+                    }
+
+                    ul {
+                        @include clear_ul;
+                        padding: 0;
+                        li {
+                            display: inline;
+                            margin: 0 10px 0 0;
+                            a {
+                                img {
+                                    height: 20px;
+                                }
+                            }
+                        }
+                    }
+                    margin-bottom: 2rem;
+                }
+                nav {
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    ul {
+                        @include clear_ul;
+                        padding-left: 0;
+                        width: 200px;
+                        flex-grow: 1;
+                        font-size: 1.5rem;
+                        margin-bottom: 2rem;
+                        li {
+                            a:hover {
+                                color: $pink;
+                            }
+                        }
+                        li:first-child {
+                            font-weight: bold;
+                            margin-bottom: 15px;
+                        }
+                    }
+                    margin-bottom: 2rem;
+                }
+            }
+            div.footer-copy {
+                p {
+                    font-size: 1.8rem;
+                }
+                p:nth-child(2) {
+                    display: none;
+                }
+                margin-bottom: 4rem;
+            }
+        }
+
+        hr.break {
+            margin-bottom: 4rem;
+            height: 2px;
+            background-color: $ligt-gray;
+            border: none;
+        }
+    }
 }
 
 /****************************************************************************************************************************************************/
@@ -423,102 +427,102 @@ body {
 
 /* 3.1. Desktop styling applies to all website windowns equal or wider than 768px*/
 @media screen and (min-width: 768px) {
-  body {
-    margin: 0 auto;
-    max-width: 45rem;
-    header {
-      nav {
-        background-image: none;
-        ul {
-          @include clear_ul;
-          margin-right: -2rem;
-          li {
-            /* for desktop version of website navigation list is displayed */
-            display: inline;
-          }
+    body {
+        margin: 0 auto;
+        max-width: 45rem;
+        header {
+            nav {
+                background-image: none;
+                ul {
+                    @include clear_ul;
+                    margin-right: -2rem;
+                    li {
+                        /* for desktop version of website navigation list is displayed */
+                        display: inline;
+                    }
+                }
+            }
         }
-      }
-    }
-    main {
-      section.launching-soon {
-        div.right-side {
-          background-position: center;
-        }
-      }
-      section.nft-banner {
-        border-radius: 1rem;
-        margin: 0 0rem 4rem 0rem;
-      }
-      section.companies-logo {
-        flex-wrap: nowrap;
+        main {
+            section.launching-soon {
+                div.right-side {
+                    background-position: center;
+                }
+            }
+            section.nft-banner {
+                border-radius: 1rem;
+                margin: 0 0rem 4rem 0rem;
+            }
+            section.companies-logo {
+                flex-wrap: nowrap;
 
-        justify-content: space-between;
-        div.open-door {
-          /* for desktop version of website OpenDoor company logo is displayed */
-          display: block;
+                justify-content: space-between;
+                div.open-door {
+                    /* for desktop version of website OpenDoor company logo is displayed */
+                    display: block;
+                }
+            }
+            section.auction {
+                width: 100%;
+            }
+            hr.break {
+                margin-right: 0;
+                margin-left: 0;
+            }
         }
-      }
-      section.auction {
-        width: 100%;
-      }
-      hr.break {
-        margin-right: 0;
-        margin-left: 0;
-      }
+        footer {
+            section.launching-soon {
+                div.right-side {
+                    background-position: center;
+                }
+            }
+            section.footer-end {
+                div.footer-main {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    column-gap: 20px;
+                    div.logo-social {
+                        img {
+                            width: 200px;
+                        }
+                        ul {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            margin-left: -5rem;
+                            li {
+                                width: 20px;
+                            }
+                        }
+                    }
+                    nav {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        column-gap: 10px;
+                        ul {
+                            width: auto;
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                div.footer-copy {
+                    display: flex;
+                    justify-content: space-between;
+                    p {
+                        font-size: 1rem;
+                    }
+                    p:nth-child(2) {
+                        display: block;
+                    }
+                }
+            }
+            hr.break {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
     }
-    footer {
-      section.launching-soon {
-        div.right-side {
-          background-position: center;
-        }
-      }
-      section.footer-end {
-        div.footer-main {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          column-gap: 20px;
-          div.logo-social {
-            img {
-              width: 200px;
-            }
-            ul {
-              display: flex;
-              flex-direction: row;
-              justify-content: flex-start;
-              margin-left: -5rem;
-              li {
-                width: 20px;
-              }
-            }
-          }
-          nav {
-            display: flex;
-            flex-wrap: nowrap;
-            column-gap: 10px;
-            ul {
-              width: auto;
-              font-size: 1rem;
-            }
-          }
-        }
-        div.footer-copy {
-          display: flex;
-          justify-content: space-between;
-          p {
-            font-size: 1rem;
-          }
-          p:nth-child(2) {
-            display: block;
-          }
-        }
-      }
-      hr.break {
-        margin-right: 0;
-        margin-left: 0;
-      }
-    }
-  }
 }
 /****************************************************************************************************************************************************/
 /* End of website styling*/
